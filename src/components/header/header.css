@@ -1,0 +1,192 @@
+header {
+  background: #FEFAE0;
+  padding: 15px 20px;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  z-index: 9999;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  min-width: 400px;  /* Reduced minimum width */
+  height: 150px;     /* Keep height */
+  display: flex;
+  align-items: center;
+  margin: 0;         /* Remove auto margin */
+  padding: 10px 0;   /* Keep vertical spacing */
+}
+
+.logo-image {
+  width: auto;       /* Let the image use its natural width */
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;  /* Align to left */
+  max-width: 800px;  /* Keep maximum width */
+}
+
+/* Responsive adjustments for logo */
+@media screen and (max-width: 1600px) {
+  .logo {
+    min-width: 700px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .logo {
+    min-width: 600px;
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    min-width: 500px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .logo {
+    min-width: 400px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    min-width: 300px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo {
+    min-width: 250px;
+    height: 40px;
+  }
+}
+.profile {
+  margin-left: 30px;
+  cursor: pointer;
+}
+.profile .image {
+  display: flex;
+  padding-bottom: 20px;
+}
+.profile .image img {
+  margin-right: 20px;
+}
+.profile button {
+  font-size: 17px;
+  font-weight: 500;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.openProfile {
+  color: #000;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  width: 250px;
+  background: #fff;
+}
+.openProfile .box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  transition: 0.5s;
+}
+.openProfile .icon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.openProfile h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.openProfile button:hover {
+  background: #f7800024;
+}
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-buttons .box {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #F77F00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-buttons .box:hover {
+  background: #e67300;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons .icon {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.nav-buttons h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .nav-buttons {
+    gap: 10px;
+  }
+  
+  .nav-buttons .box {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .nav-buttons .icon {
+    font-size: 14px;
+    margin-right: 6px;
+  }
+}
+header.active {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #FEFAE0;
+}
+@media screen and (max-width: 768px) {
+  header .search {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+}
