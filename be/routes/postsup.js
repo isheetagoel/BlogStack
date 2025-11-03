@@ -44,11 +44,11 @@ router.post('/', async (req, res) => {
     }
 });
 
-//Create
+// Create a new post
 router.post('/postsup', async (req, res) => {
     try {
         const { title, content, category, date, author } = req.body;
-
+        
         const newPost = new Post({ 
             title, 
             content, 
@@ -56,9 +56,12 @@ router.post('/postsup', async (req, res) => {
             date: date || new Date(),
             author: author || 'Anonymous'
         });
-        await newPost.save();
-
-        res.status(201).json({ message: 'Post created successfully', post: newPost });
+        
+        const savedPost = await newPost.save();
+        res.status(201).json({ 
+            message: 'Post created successfully', 
+            post: savedPost 
+        });
     } catch (error) {
         console.error('Error creating post:', error);
         res.status(500).json({ 
